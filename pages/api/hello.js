@@ -1,5 +1,10 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import styled from 'styled-components'
 
-export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+const Title = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.background1};
+`
+
+export default function Home() {
+  return <Title>My page</Title>
 }
