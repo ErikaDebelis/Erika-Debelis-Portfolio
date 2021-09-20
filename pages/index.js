@@ -1,5 +1,7 @@
-import styled from 'styled-components'
-import { Layout } from '../layout/Layout'
+import Accomplishments from '../components/Accomplishments/Accomplishments';
+import Hero from '../components/Hero/Hero';
+import styled from 'styled-components';
+import { Layout } from '../layout/Layout';
 
 const Title = styled.h1`
   font-size: 50px;
@@ -9,8 +11,8 @@ const Title = styled.h1`
 const Home = ()  => {
   return(
     <Layout>
-
-    <p>hello</p>
+    <Hero/>
+    <Accomplishments/>
     </Layout>
   )
 }
