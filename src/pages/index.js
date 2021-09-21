@@ -1,20 +1,25 @@
 import Accomplishments from '../components/Accomplishments/Accomplishments';
+import BgAnimation from '../components/BackgrooundAnimation/BackgroundAnimation';
 import Hero from '../components/Hero/Hero';
-import styled from 'styled-components';
+import Projects from '../components/Projects/Projects';
+import Technologies from '../components/Technologies/Technologies';
+import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
+import { Section } from '../styles/GlobalComponents';
 
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.background1};
-`
-
-const Home = ()  => {
-  return(
+const Home = () => {
+  return (
     <Layout>
-    <Hero/>
-    <Accomplishments/>
+      <Section grid>
+        <Hero />
+        <BgAnimation />
+      </Section>
+      <Projects />
+      <Technologies />
+      <Timeline />
+      <Accomplishments />
     </Layout>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

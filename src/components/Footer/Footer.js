@@ -1,13 +1,14 @@
-import Link from 'next/link';
 import React from 'react';
-import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from 'react-icons/ai';
-import { DiCssdeck } from 'react-icons/di';
+import { AiFillGithub,
+  AiFillLinkedin
+} from 'react-icons/ai';
 import { SocialIcons } from '../Header/HeaderStyles';
-import {
-  CompanyContainer,
-  FooterBy,
+import { CompanyContainer,
   FooterWrapper,
+  LinkColumn,
   LinkItem,
+  LinkList,
+  LinkTitle,
   Slogan,
   SocialContainer,
   SocialIconsContainer
@@ -16,30 +17,31 @@ import {
 const Footer = () => {
   return (
     <FooterWrapper>
+      <LinkList>
+        <LinkColumn>
+          <LinkTitle>Call</LinkTitle>
+          <LinkItem href="tel:314-343-3432">314-343-3432</LinkItem>
+        </LinkColumn>
+        <LinkColumn>
+          <LinkTitle>Email</LinkTitle>
+          <LinkItem href="mailto:erika.debelis@gmail.com">
+            erika.debelis@gmail.com
+          </LinkItem>
+        </LinkColumn>
+      </LinkList>
       <SocialIconsContainer>
         <CompanyContainer>
-          <Link href="/">
-            <LinkItem href="/">
-              <DiCssdeck size="3rem" /> <span>Portfolio</span>
-            </LinkItem>
-          </Link>
           <Slogan>Innovating one project at a time</Slogan>
         </CompanyContainer>
         <SocialContainer>
           <SocialIcons href="https://google.com">
-            <AiFillGithub size="2rem" />
+            <AiFillGithub size="3rem" />
           </SocialIcons>
           <SocialIcons href="https://google.com">
-            <AiFillLinkedin size="2rem" />
-          </SocialIcons>
-          <SocialIcons href="https://google.com">
-            <AiFillInstagram size="2rem" />
+            <AiFillLinkedin size="3rem" />
           </SocialIcons>
         </SocialContainer>
       </SocialIconsContainer>
-      <FooterBy>
-      &copy; Created Using NextJs {new Date().getFullYear()} 
-      </FooterBy>
     </FooterWrapper>
   );
 };
